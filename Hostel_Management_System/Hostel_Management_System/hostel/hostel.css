@@ -1,0 +1,242 @@
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa; /* Light background color */
+    color: #333; /* Dark text for readability */
+}
+
+/* Menu Styling */
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Dark background for menu */
+    border-radius: 5px;
+}
+ul.menu * {
+    margin: 0;
+    padding: 0;
+}
+ul.menu a {
+    display: block;
+    color: #ecf0f1; /* Light text for contrast */
+    text-decoration: none;
+    padding: 10px;
+}
+ul.menu li {
+    position: relative;
+    float: left;
+    margin-right: 2px;
+}
+ul.menu ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #34495e; /* Darker sub-menu background */
+    display: none;
+    opacity: 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+ul.menu ul li {
+    border: 1px solid #ccc;
+    width: 180px;
+}
+ul.menu ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    transition: background-color 0.3s ease;
+}
+ul.menu ul li a:hover {
+    background-color: #16a085; /* Soft hover effect */
+}
+ul.menu .menulink {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #2c3e50;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+ul.menu .menulink:hover {
+    background-color: #1abc9c;
+}
+ul.menu .sub {
+    background: url(images/arrow.gif) no-repeat 136px 8px;
+    padding-left: 20px;
+}
+ul.menu .topline {
+    border-top: 1px solid #ccc;
+}
+
+/* Text and Font Styling */
+.left {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.JT {
+    border-right: 1px solid #ccc;
+    background-color: #ecf0f1;
+    border-left: 1px solid #ccc;
+}
+
+.JT1, .JT2, .JT4 {
+    border: 1px solid #ccc;
+    background-color: #ecf0f1;
+}
+
+.note {
+    color: #e74c3c; /* Red for warning */
+    font-family: 'Arial', sans-serif;
+}
+
+a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.links {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.heading {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50; /* Darker text for headings */
+    padding: 8px 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.headingwithout {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 5px 10px;
+}
+
+/* Buttons */
+.button1 {
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+    background-color: #16a085; /* Darker green on hover */
+}
+
+/* Inputs & Textboxes */
+.txtbox3, .txtbox4 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.txtbox3:focus, .txtbox4:focus {
+    border-color: #3498db; /* Blue border on focus */
+}
+
+.comb-value {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #f4f7fa;
+}
+
+/* Price Styling */
+.price {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.price1 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7f8c8d; /* Lighter grey for strikethrough */
+    text-decoration: line-through;
+}
+
+/* Footer Links */
+.links2 {
+    font-family: 'Geneva', sans-serif;
+    font-size: 14px;
+    color: #7f8c8d;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+/* Header Styling */
+.heading5 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 20px;
+    color: #e74c3c;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+/* Backgrounds */
+.background {
+    background-image: url(images/bar_02.gif);
+    width: 212px;
+    background-repeat: repeat-y;
+    height: 36px;
+}
+
+.backgroundmid {
+    background-image: url(images/bar_05.gif);
+    width: 212px;
+    background-repeat: repeat-y;
+}
+
+/* General Font */
+.font {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+/* Header Styling */
+.header {
+    font-family: 'Verdana', Geneva, sans-serif;
+    font-size: 16px;
+    color: #454545;
+    font-weight: bold;
+    padding: 2px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}

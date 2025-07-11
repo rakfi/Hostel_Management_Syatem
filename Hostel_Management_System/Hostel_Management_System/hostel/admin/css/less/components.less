@@ -1,0 +1,264 @@
+@import 'less/vars';
+
+/******************************
+ *        Global Variables    *
+ ******************************/
+@font-primary: 'Roboto', sans-serif;
+@font-secondary: 'Lora', serif;
+@color-primary: #337ab7;
+@color-secondary: #5bc0de;
+@color-danger: #d9534f;
+@color-success: #5cb85c;
+@color-warning: #f0ad4e;
+@color-background: #f7f7f7;
+@color-text: #333;
+@color-muted: #818181;
+@selection-color: lighten(@color-primary, 15%);
+
+/******************************
+ *        Global Styles       *
+ ******************************/
+::selection {
+  background: @selection-color;
+  color: #fff;
+}
+::-moz-selection {
+  background: @selection-color;
+  color: #fff;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: @font-secondary;
+  font-size: 1em;
+  color: @color-text;
+  background: @color-background;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: @color-primary;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: lighten(@color-primary, 10%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-primary;
+  font-weight: bold;
+  color: @color-text;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+/******************************
+ *        Typography          *
+ ******************************/
+.content-format {
+  p {
+    margin-bottom: 1.8em;
+  }
+
+  ul,
+  ol {
+    margin: 1.5em 0;
+    padding-left: 2em;
+    line-height: 1.6;
+
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  blockquote {
+    margin: 1.5em 0;
+    padding-left: 1em;
+    border-left: 4px solid @color-muted;
+    color: darken(@color-muted, 10%);
+    font-style: italic;
+
+    &.double-quote {
+      border-left: none;
+      padding-left: 1em;
+    }
+  }
+
+  pre {
+    background: lighten(@color-background, 5%);
+    border: 1px solid #ededed;
+    font-family: monospace;
+    padding: 1em;
+    margin: 1.5em 0;
+    overflow: auto;
+  }
+}
+
+/******************************
+ *        Buttons             *
+ ******************************/
+.btn {
+  font-family: @font-primary;
+  font-size: 1em;
+  padding: 0.8em 1.2em;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &.btn-primary {
+    background: @color-primary;
+    color: #fff;
+
+    &:hover {
+      background: lighten(@color-primary, 10%);
+    }
+  }
+
+  &.btn-danger {
+    background: @color-danger;
+    color: #fff;
+
+    &:hover {
+      background: darken(@color-danger, 10%);
+    }
+  }
+
+  &.btn-success {
+    background: @color-success;
+    color: #fff;
+
+    &:hover {
+      background: lighten(@color-success, 10%);
+    }
+  }
+
+  &.btn-alt {
+    background: lighten(@color-background, 10%);
+    color: @color-text;
+
+    &:hover {
+      background: @color-primary;
+      color: #fff;
+    }
+  }
+}
+
+/******************************
+ *        Backgrounds         *
+ ******************************/
+.bk {
+  &-primary {
+    background: @color-primary;
+  }
+
+  &-success {
+    background: @color-success;
+  }
+
+  &-warning {
+    background: @color-warning;
+  }
+
+  &-danger {
+    background: @color-danger;
+  }
+
+  &-light {
+    background: #fff;
+  }
+
+  &-dark {
+    background: #222;
+  }
+
+  &-transparent {
+    background: transparent;
+  }
+}
+
+/******************************
+ *        Spacing             *
+ ******************************/
+.spacing {
+  &-small {
+    margin: 0.5em 0;
+  }
+
+  &-medium {
+    margin: 1em 0;
+  }
+
+  &-large {
+    margin: 1.5em 0;
+  }
+}
+
+.mt {
+  &-small {
+    margin-top: 0.5em;
+  }
+
+  &-medium {
+    margin-top: 1em;
+  }
+
+  &-large {
+    margin-top: 1.5em;
+  }
+}
+
+.mb {
+  &-small {
+    margin-bottom: 0.5em;
+  }
+
+  &-medium {
+    margin-bottom: 1em;
+  }
+
+  &-large {
+    margin-bottom: 1.5em;
+  }
+}
+
+/******************************
+ *        Utilities           *
+ ******************************/
+.clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

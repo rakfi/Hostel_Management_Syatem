@@ -1,0 +1,161 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900,100italic,300italic,400italic');
+@import url('https://fonts.googleapis.com/css?family=Oswald:700,400,300');
+
+// Font Definitions
+@primary-font: 'Oswald', sans-serif;
+@secondary-font: 'Lato', sans-serif;
+
+// Layout Breakpoints
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 479px)";
+@tablet:      ~"only screen and (min-width: 480px)";
+@desktop:     ~"only screen and (min-width: 992px)";
+@desktop-xl:  ~"only screen and (min-width: 1200px)";
+
+// Color Palette
+@background: #ffffff;
+@color-primary: #325d88; // Primary brand color
+@color-secondary: #37a6c4; // Secondary brand color
+@color-accent: #ff962f; // Accent color
+@color-dark: #25292a; // Dark color for text
+@color-light: #f7f7f7; // Light color for backgrounds
+
+// Semantic Colors
+@color-success: #93c54b;
+@color-warning: #f47c3c;
+@color-danger: #d9534f;
+@color-info: #29abe0;
+
+// Selection Color
+@selection: #4f5362;
+
+// Typography Colors
+@color-text-primary: @color-dark;
+@color-text-muted: lighten(@color-dark, 40%);
+@color-text-inverse: #ffffff;
+
+// Accessibility
+@focus-color: darken(@color-primary, 10%);
+@focus-outline: 3px solid @focus-color;
+
+// Responsive Typography
+html {
+  font-family: @secondary-font;
+  font-size: 14px;
+
+  @media @tablet {
+    font-size: 17px;
+  }
+
+  @media @desktop {
+    font-size: 18px;
+  }
+
+  @media @desktop-xl {
+    font-size: 20px;
+  }
+}
+
+// Background and Utility Colors
+.bk-primary {
+  background-color: @color-primary;
+  color: @color-text-inverse;
+}
+
+.bk-secondary {
+  background-color: @color-secondary;
+  color: @color-text-inverse;
+}
+
+.bk-accent {
+  background-color: @color-accent;
+  color: @color-text-inverse;
+}
+
+.bk-light {
+  background-color: @color-light;
+  color: @color-text-primary;
+}
+
+.bk-dark {
+  background-color: @color-dark;
+  color: @color-text-inverse;
+}
+
+// Button Variants
+.btn {
+  font-family: @primary-font;
+  border: none;
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &-primary {
+    background-color: @color-primary;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: lighten(@color-primary, 10%);
+    }
+  }
+
+  &-secondary {
+    background-color: @color-secondary;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: lighten(@color-secondary, 10%);
+    }
+  }
+
+  &-accent {
+    background-color: @color-accent;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: darken(@color-accent, 10%);
+    }
+  }
+
+  &-success {
+    background-color: @color-success;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: lighten(@color-success, 10%);
+    }
+  }
+
+  &-warning {
+    background-color: @color-warning;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: darken(@color-warning, 10%);
+    }
+  }
+
+  &-danger {
+    background-color: @color-danger;
+    color: @color-text-inverse;
+
+    &:hover {
+      background-color: darken(@color-danger, 10%);
+    }
+  }
+}
+
+// Selection Styling
+::selection {
+  background: @selection;
+  color: @color-text-inverse;
+}
+
+::-moz-selection {
+  background: @selection;
+  color: @color-text-inverse;
+}

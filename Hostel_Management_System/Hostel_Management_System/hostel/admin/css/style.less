@@ -1,0 +1,338 @@
+@import 'less/vars';
+@import 'less/components';
+
+/*
+ * Theme Struck - Harmony - Enhanced Version
+ * Code licensed under the MIT
+ * For details, see #
+ */
+
+/* General reset */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Social Button Modifications */
+.btn {
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.btn-social > :first-child {
+  width: 42px;
+  line-height: 46px;
+}
+
+.btn-social {
+  padding-left: 58px;
+}
+
+/* Circle buttons */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.428571429;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+/* Chart Design */
+.chart-dot-list {
+  display: block;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.chart-dot-list li {
+  margin-bottom: 4px;
+}
+
+.chart-dot-list li:before {
+  content: '';
+  height: 12px;
+  width: 12px;
+  margin-right: 6px;
+  display: inline-block;
+  background: #222;
+  border-radius: 50%;
+}
+
+.chart-dot-list li.a1:before {
+  background: #F7464A;
+}
+
+.chart-dot-list li.a2:before {
+  background: #46BFBD;
+}
+
+.chart-dot-list li.a3:before {
+  background: #FDB45C;
+}
+
+.chart-doughnut {
+  padding: 41px 0;
+}
+
+/* Page Title */
+.page-title {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Brand Section */
+.brand {
+  background: linear-gradient(135deg, #1d2b36, #3e454c);
+  
+  .logo {
+    padding: 20px;
+    display: block;
+    width: 250px;
+    img {
+      height: 25px;
+    }
+  }
+
+  .menu-btn {
+    display: none;
+    @media @desktop {
+      display: block;
+      background: #232d3b;
+      text-align: center;
+      cursor: pointer;
+      color: #fff;
+      padding: 20px;
+    }
+  }
+
+  .ts-profile-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    li {
+      position: relative;
+      margin-right: 15px;
+      a {
+        padding: 20px;
+        color: #fff;
+        transition: background 0.3s ease-in-out;
+        &:hover {
+          background: #1e262f;
+        }
+      }
+      ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s ease-in-out;
+        li {
+          width: 180px;
+          a {
+            padding: 10px 20px;
+            background: #222;
+          }
+        }
+      }
+    }
+
+    .ts-account {
+      .fa-angle-down {
+        float: right;
+      }
+
+      &:hover {
+        ul {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > a {
+        width: 180px;
+        background: #2c3136;
+      }
+
+      .ts-avatar {
+        border-radius: 50%;
+        height: 28px;
+        margin: -10px 0;
+        margin-right: 10px;
+      }
+    }
+
+    @media @desktop {
+      display: flex;
+    }
+  }
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 3;
+}
+
+/* Sidebar */
+.ts-sidebar {
+  background: #2c3136;
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  bottom: 0;
+  overflow-y: auto;
+  max-height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  @media @desktop {
+    width: 250px;
+    top: 0;
+    bottom: 0;
+  }
+
+  .ts-sidebar-search {
+    width: 100%;
+    background: #25292a;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .ts-profile-nav {
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  .ts-sidebar-menu {
+    .ts-label {
+      color: #585c64;
+      font-weight: bold;
+      padding: 8px 15px;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-top: 10px;
+    }
+
+    a {
+      display: block;
+      padding: 12px 15px;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        background: rgba(51, 56, 62, 0.35);
+        border-left: 3px solid #f7464a;
+      }
+    }
+
+    li {
+      position: relative;
+
+      i {
+        color: #585c64;
+        margin-right: 10px;
+      }
+
+      ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+    }
+  }
+
+  .menu-open,
+  .ts-sidebar-menu .open > ul {
+    max-height: 2000px;
+  }
+
+  .ts-sidebar-menu .open > a {
+    background: #33383e;
+    border-left: 3px solid #f7464a;
+  }
+
+  .more i {
+    color: #fff;
+    padding: 15px;
+    transition: transform 0.3s;
+  }
+
+  .more {
+    float: right;
+    cursor: pointer;
+  }
+}
+
+/* Main Content */
+.ts-main-content {
+  .content-wrapper {
+    padding-top: 15px;
+    margin-top: 60px;
+  }
+
+  @media @desktop {
+    .ts-sidebar {
+      width: 250px;
+      float: left;
+    }
+
+    .content-wrapper {
+      margin-left: 250px;
+    }
+  }
+}
+
+/* Login page */
+.login-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d2b36, #3e454c);
+}
