@@ -26,7 +26,20 @@ Here's the updated **readme.txt** file including instructions to put the project
 
 5. **Run the Application:**  
    - Open your browser.  
-   - Enter the following URL in the address bar: `http://localhost/hostel/`.  
+   - Enter the following URL in the address bar: `http://localhost/Hostel_Management_System/hostel/`.  
+
+   user login page
+   ![alt text](image.png)
+
+   admin login
+   ![alt text](image-1.png)
+
+   admin dashboard
+   ![alt text](image-2.png)
+
+   user dashboard
+   ![alt text](image-3.png)
+
 
 ---
 
